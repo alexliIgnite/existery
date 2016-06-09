@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Existery - Refined Information {% endblock %}</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap -->
+    <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Exo:400,700' rel='stylesheet' type='text/css'>
+    <link href="{{ asset('css/base.css') }}" rel="stylesheet">
+    {% stylesheets '@mainBundle/Resources/public/css/*' filter='cssrewrite' %}
+	<link rel="stylesheet" href="{{ asset_url }}" />
+	{% endstylesheets %}
+    <!-- HTML5 Shim and Respond.js add IE8 support of HTML5 elements and media queries -->
+    {% include 'BraincraftedBootstrapBundle::ie8-support.html.twig' %}
+</head> 
+<body>
+	<div id="topMenu">Existery
+		<div class="userIcon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></div>	
+		{% block tuid %} {% endblock %}
+	</div>
+	
+	<div id="content">
+		{% block body %} {% endblock %}	
+	</div>
+    <!-- jQuery (necessary for Bootstraps JavaScript plugins) -->
+    <script src="{{ asset('js/jquery.js') }}"></script>
+    <!-- Include all JavaScripts, compiled by Assetic -->
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
+    <script src="http://cdn.jquerytools.org/1.2.6/full/jquery.tools.min.js"></script>
+    {% javascripts '@mainBundle/Resources/public/js/*' %}
+    <script src="{{ asset_url }}"></script>
+	{% endjavascripts %}
+</body>
+</html>

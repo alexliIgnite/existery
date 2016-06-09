@@ -1,0 +1,21 @@
+{% extends 'mainBundle::base.html.twig' %}
+{% block title %}Existery -- Refined Information {% endblock %}
+{% block tuid %} <div class="userID" >{{tempUID}}</div> {% endblock %}
+{% block body %}
+	<div class="row">
+	{% for post in posts %}
+  			<div class="col-sm-6 col-md-4">
+    			<div class="thumbnail" style="background-color:{{post.bgColor}} !important;">
+      				<img src="{{ post.thumbnail }}" alt="...">
+      				<div class="caption">
+        				<h3>{{post.title}}</h3>
+        				<p>{{post.description}}</p>
+        				<p class="readButton"><a href="/getFullPost/{{ post.id }}" rel="#overlay" class="btn btn-primary" role="button" ptid="{{ post.id }}">Read</a></p>
+      				</div>
+    			</div>
+  			</div>
+	{% endfor %}
+	</div>
+	<div class="apple_overlay" id="overlay"><a class="close"></a><div class="contentWrap"></div></div>
+	{% include 'mainBundle:Default:feedBar.html.twig' %}
+{% endblock %}

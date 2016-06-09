@@ -1,0 +1,32 @@
+#topMenu
+{
+	width:200px;
+	height:40px;
+	position:fixed;
+	margin-left:40%;
+	z-index:10001;
+	background-color:#07728A;
+	opacity: 1;
+	font-family: 'Exo';
+	font-style: bold;
+	font-weight: 400;
+	font-size: 25px;
+	padding: 2px 8px ;
+	color: #FFF;
+	border-bottom-right-radius:0.5em;
+	border-bottom-left-radius:0.5em;
+	float:left;
+	
+	
+}
+.userID
+{
+	padding: 20px 0px;
+	float:right;
+	font-size:10px;
+}
+.userIcon
+{
+	padding: 4px 5px ;
+	float:right;	
+}

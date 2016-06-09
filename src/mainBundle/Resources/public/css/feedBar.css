@@ -1,0 +1,10 @@
+#feedBar
+{
+	width:100%;
+	height:150px;
+	position:fixed;
+	bottom: 0px;
+	z-index:10;
+	background-color:#07728A;
+	opacity: 0.9;
+}
